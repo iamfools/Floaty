@@ -1197,8 +1197,7 @@ extension Floaty {
     func setAccessibilityView() {
         self.addSubview(accessibilityView)
         accessibilityView.isAccessibilityElement = true
-//        accessibilityView.accessibilityTraits |= UIAccessibilityTraitButton
-        accessibilityView.accessibilityTraits.formUnion(UIAccessibilityTraits.button)
+        accessibilityView.accessibilityTraits.insert([.button])
     }
     
     open override var accessibilityLabel : String? {
